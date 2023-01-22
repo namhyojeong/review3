@@ -10,7 +10,7 @@ public class p20230119_4 {
 	String str = "";
 	
 	do {
-		System.out.println("문자열을 입력하세요.");
+		System.out.println("문자열을 입력하세요..");
 		str = sc.nextLine();
 		System.out.println(str);
 	} while (!str.equals("exit"));

@@ -13,15 +13,15 @@ public class p20230119_1 {
 	}
 
 
-		/* int num = 10;
-		 * System.out.println("num = " + num);
-		 * num  += 3;
-		 * System.out.println("num = " + num);
-		 * num = num + 3;
-		 * System.out.println("num = " + num);
-		 * num = num -3;
-		 * System.out.println("num = " + num);
-		 * 예상되는 출력값을 적어라*/
+//		 * int num = 10;
+//		 * System.out.println("num = " + num);
+//		 * num  += 3;
+//		 * System.out.println("num = " + num);
+//		 * num = num + 3;
+//		 * System.out.println("num = " + num);
+//		 * num = num -3;
+//		 * System.out.println("num = " + num);
+//		 * 예상되는 출력값을 적어라*
 	
 	}
 

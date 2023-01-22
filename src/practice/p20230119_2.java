@@ -9,7 +9,7 @@ public class p20230119_2 {
 		/* 구구단 구하는 공식을 if와  for문을 이용하여 구해보자 */
 		
 		Scanner sc = new Scanner(System.in);
-		System.out.println("출력할 단을 입력하세요.");
+		System.out.println("출력할 단을 입력하세요..");
 		int dan = sc.nextInt();
 		
 		if (dan >= 2 && dan <= 9) {

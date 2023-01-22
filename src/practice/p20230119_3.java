@@ -24,7 +24,7 @@ public class p20230119_3 {
 		int num1 = sc.nextInt();
 		System.out.println("두 번째 정수 : ");
 		int num2 = sc.nextInt();
-		System.out.println("연산기호 입력하세요. (+, -, *, /, %)");
+		System.out.println("연산기호 입력하세요.. (+, -, *, /, %)");
 		char ch = sc.next().charAt(0);
 		
 		int result = 0;
