@@ -1,44 +1,59 @@
-- Git 이용해서 버전 관리하기
-Git? : 소스코드를 효과적으로 관리하기 위해 개발된 분산형 버전 관리 시스템.
-1.소스코드가 변경된 이력 쉽게 확인 가능.
-2.특정 시점에 저장된 버전과 비교 and 특정 시점으로 되돌아갈 수 있음.
-3.파일이 누군가 편집한 내용과 충돌 시 경고 메시지 발생.
-=> 업데이트 이력이 Git에 저장되어 백업용 파일 만들 필요 없음.
+/* 컬렉션 프레임워크(Collection Framework) 
+	     *
+	     * 1. List 인터페이스
+	     *  - 순서가 있는 데이터의 집합으로 데이터의 중복 저장을 허용한다.
+	     *  - Vector, ArrayList, LinkedList, Stack, Queue 등이 있다.
+	     * 2. Set 인터페이스
+	     *  - 순서가 없는 데이터의 집합으로 데이터 중복을 허용하지 않는다.
+	     *  - HashSet, TreeSet 등이 있다.
+	     * 3. Map 인터페이스
+	     *  
+	     */
+		
+		/* ArrayList
+		 * JDK 1.2부터 제공되는 가장 많이 사용되는 컬렉션 클래스이다.
+		 * 내부적으로 배열을 이용하여 요소를 관리하며 인덱스를 이용해 배열의 요소에 접근한다.
+		 * ArrayList는 객체 배열의 단점을 보완하기 위해 만들어졌다.
+		 * 배열의 크기를 변경할 수 없고, 요소의 추가, 삭제, 정렬 등의 복잡하다는 단점을 가지고 있다.
+		 * ArrayList는 크기 변경, 요소의 추가, 삭제, 정렬 기능에 따라 구현해놓고 제공해주고 있다.
+		 * */
+		
+		/* ArrayList는 인스턴스를 생성하게 되면 내부적으로 10칸짜리 배열을 생성해서 관리한다. */
+		ArrayList alist = new ArrayList();
+		
+		/* 다형성을 적용하여 상위 타입으로 ArrayList 객체를 만든다.
+		 * List 인터페이스 하위의 ㄷ양한 구현체들로 타입변경이 가능하기 때문에
+		 * 레퍼런스 타입은 List로 해두는 것이 더 유연하게 코드를 작성하는 것이다.
+		 * */
+		List list = new ArrayList();
+//		list = new LinkedList(list);
+		
+		list.add("apple");
+		list.add(123);
+		list.add(45.67);
+		list.add(new java.util.Date());
+		
+		System.out.println(list.get(0));
+		
+		System.out.println("list : " + list);
+		
+		System.out.println("list의 size() : " + list.size());
+		
+		for (int i = 0; i < list.size(); i++) {
+			System.out.println(i + " : " + list.get(i));
+			
+		}
+		list.add("apple");
+		System.out.println("list : " + list);
+		
+		list.add(1, "banana");
+		System.out.println("list : " + list);
+		
+		list.remove(2);
+		System.out.println("list : " + list);
+		
+		list.set(1, true);
+		System.out.println("list : " + list);
+	}
 
-- 원격 저장소와 로컬 저장소
-원격 저장소 : 파일이 원격 저장소 전용 서버에서 관리되며 여러 사람이 함께 공유하기 위한 저장소.
-로컬 저장소 : 내 PC에 파일이 저장되는 개인 전용 저장소.
-
-- 커밋 : 파일 및 폴더의 추가/변경 사항을 저장소에 기록.
-이력을 남기는 중요한 작업이기 때문에 커밋 버튼을 누를땐 커밋 메시지를 필수로 입력해야 함. 메시지가 없으면 커밋이 실행되지 않음.
-
-- 작업트리와 인덱스
-작업 트리 : Git에서 말하는 폴더.
-인덱스 : 커밋을 실행하기 전의 저장소와 작업 트리 사이에 존재하는 공간.
-
-<커밋위치>
-- origin/master
-원격 저장소 「origin」의 브랜치인 「master」의 위치를 나타냄.
-
-- origin/HEAD
-원격 저장소 「origin」을 복제해 올 때 다운로드되는 커밋의 위치를 나타냄.
-일반적으로 「origin/master」와 동일한 위치를 가리킴.
-- master
-로컬 저장소 브랜치인 「master」의 위치를 나타냄.
-
-
-
-
-- 브랜치란?
-여러 개발자들이 동시에 다양한 작업을 할 수 있게 만들어 주는 기능.
-각자 독립적인 작업 영역(저장소) 안에서 마음대로 소스코드를 변경할 수 있음.
-
-- master 브랜치
-저장소를 처음 만들면, Git은 바로 'master'라는 이름의 브랜치를 만들어 둠.
-
-- 통합 브랜치
-언제든지 배포할 수 있는 버전을 만들 수 있어야 하는 브랜치.
-
-- 토픽 브랜치
-기능 추가나 버그 수정과 같은 단위 작업을 위한 브랜치.
-
+}
